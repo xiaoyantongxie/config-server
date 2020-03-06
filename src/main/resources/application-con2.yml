@@ -1,0 +1,15 @@
+server:
+  port: 8202
+eureka:
+  instance:
+    hostname: uk1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@uk2:7002/eureka/
+spring:
+  security:
+    user:
+      name: admin
+      password: admin

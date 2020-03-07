@@ -4,16 +4,6 @@ spring:
     url: jdbc:mysql://localhost:3306/ctsystem?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: 123456
-  eureka:
-    client:
-      service-url:
-        defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@uk1:7001/eureka/,http://${spring.security.user.name}:${spring.security.user.password}@uk2:7002/eureka/
-  security:
-    user:
-      name: admin
-      password: admin
-    instance:
-      prefer-ip-address: true
   mybatis:
     mapper-locations: classpath:/mapping/*.xml
     type-aliases-package: com.youy.entity

@@ -4,6 +4,6 @@ spring:
     url: jdbc:mysql://localhost:3306/ctsystem?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: 123456
-  mybatis:
-    mapper-locations: classpath:/mapping/*.xml
-    type-aliases-package: com.youy.entity
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.youy.entity

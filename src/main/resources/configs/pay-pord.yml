@@ -1,2 +1,14 @@
-my:
-  test: pord
+server:
+  port: 8030
+spring:
+  application:
+    name: client
+  thymeleaf:
+    prefix: classpath:/static/
+    suffix: .html
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@uk1:7001/eureka/,http://admin:admin@uk2:7002/eureka/
+  instance:
+    prefer-ip-address: true

@@ -7,3 +7,9 @@ spring:
 mybatis:
   mapper-locations: classpath:/mapping/*.xml
   type-aliases-package: com.youy.entity
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@uk1:7001/eureka/,http://admin:admin@uk2:7002/eureka/
+  instance:
+    prefer-ip-address: true

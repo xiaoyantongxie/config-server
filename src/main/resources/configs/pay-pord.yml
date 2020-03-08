@@ -12,3 +12,20 @@ eureka:
       defaultZone: http://admin:admin@uk1:7001/eureka/,http://admin:admin@uk2:7002/eureka/
   instance:
     prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 500 #线程超时,调用Fallback方法
+      metrics:
+         rollingStats:
+           timeInMilliseconds: 15000
+      circuitBreaker:
+         requestVolumeThreshold: 3  #10秒内出现3个以上请求(已临近阀值),并且出错率在50%以上,开启断路器.断开服务,调用Fallback方法
+         sleepWindowInMilliseconds: 10000
